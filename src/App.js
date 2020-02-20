@@ -23,11 +23,17 @@ class App extends Component {
       }
     ]
   };
+
+  markComplete = (id) => {
+    //  const todos = [...this.state.todos];
+     console.log(id);
+  }
+
   render() {
     return (
       <div className="App">
         <h1>Hello React</h1>
-        <Todos todos={this.state.todos}></Todos>
+        <Todos todos={this.state.todos} markComplete={this.markComplete}/>
       </div>
     );
   }
