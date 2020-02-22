@@ -2,7 +2,7 @@ import React from "react";
 
 const Header = () => {
   const headerStyle = {
-    background: "#333",
+    background: "#005c97",
     color: "#fff",
     textAlign: "center",
     padding: "10px"

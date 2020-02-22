@@ -7,10 +7,25 @@
 body {
   font-family: 'Ubuntu', sans-serif;
   line-height: 1.4;
+  background-color: #eff1f7;
 }
 
-/* .App {
-  text-align: left;
-} */
+.container {
+  width: 100%;
+  padding: 0 10%;
+}
+
+.btn {
+  display: inline-block;
+  border: none;
+  background: #333;
+  color: #fff;
+  padding: 7px 20px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #555;
+}
 
 
