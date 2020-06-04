@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import uuid from 'uuid';
+import uuid from "uuid";
 import "./App.css";
 
 import Todos from "./components/Todos/Todos";
@@ -12,46 +12,52 @@ class App extends Component {
       {
         id: uuid.v4(),
         title: "Going to a meeting",
-        completed: false
+        completed: false,
       },
       {
         id: uuid.v4(),
         title: "Picking up some groceries",
-        completed: false
+        completed: false,
       },
       {
         id: uuid.v4(),
         title: "Call my boss",
-        completed: false
-      }
-    ]
+        completed: false,
+      },
+    ],
   };
 
   // Toggle complete todo
-  toggleComplete = id => {
+  toggleComplete = (id) => {
     this.setState({
-      todos: this.state.todos.map(todo => {
+      todos: this.state.todos.map((todo) => {
         if (todo.id === id) {
           todo.completed = !todo.completed;
         }
         return todo;
-      })
+      }),
     });
   };
 
-  deleteTodo = todoId => {
+  deleteTodo = (todoId) => {
     this.setState({
-      todos: [...this.state.todos.filter(todo => todo.id !== todoId)]
+      todos: [...this.state.todos.filter((todo) => todo.id !== todoId)],
     });
   };
 
-  addTodo = title => {
+  addTodo = (title) => {
     const newTodo = {
       id: uuid.v4(),
       title,
-      completed: false
+      completed: false,
     };
-    this.setState({ todos: [...this.state.todos, newTodo] });
+
+    if (title === "") {
+      alert("title cannot be null");
+      this.setState({ todos: [...this.state.todos] });
+    } else {
+      this.setState({ todos: [...this.state.todos, newTodo] });
+    }
   };
 
   render() {
