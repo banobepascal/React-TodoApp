@@ -56,7 +56,6 @@ const App = () => {
     }
   };
 
-  console.log(todos);
   return (
     <div className="App">
       <div className="container">
