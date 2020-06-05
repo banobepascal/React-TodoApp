@@ -28,20 +28,18 @@ const App = () => {
 
   // Toggle complete todo
   const toggleComplete = (id) => {
-    setTodos({
-      todos: this.state.todos.map((todo) => {
+    setTodos(
+      todos.map((todo) => {
         if (todo.id === id) {
           todo.completed = !todo.completed;
         }
         return todo;
-      }),
-    });
+      })
+    );
   };
 
   const deleteTodo = (todoId) => {
-    setTodos({
-      todos: [...this.state.todos.filter((todo) => todo.id !== todoId)],
-    });
+    setTodos([...todos.filter((todo) => todo.id !== todoId)]);
   };
 
   const addTodo = (title) => {
@@ -53,12 +51,12 @@ const App = () => {
 
     if (title === "") {
       alert("title cannot be null");
-      setTodos(todos);
     } else {
-      setTodos( newTodo);
+      setTodos([...todos, newTodo]);
     }
   };
 
+  console.log(todos);
   return (
     <div className="App">
       <div className="container">
@@ -67,7 +65,7 @@ const App = () => {
         <Todos
           todos={todos}
           markComplete={toggleComplete}
-          delete={deleteTodo}
+          deleteTodo={deleteTodo}
         />
       </div>
     </div>
