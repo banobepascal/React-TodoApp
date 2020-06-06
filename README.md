@@ -1,5 +1,5 @@
 # React-TodoApp
-this is a Todo App created with React.js 
+A Todo App created with React.js and React-hooks
 
 ## Deployed
 https://banobepascal.github.io/React-TodoApp/
