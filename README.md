@@ -1,6 +1,12 @@
 # React-TodoApp
 
-A Todo App created with React.js and React-hooks
+A Todo App created with React.js
+
+## Stack
+
+- Create React App
+- React hooks
+- CSS
 
 Quick Start
 -----------
